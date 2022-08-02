@@ -1,52 +1,103 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
+	<view class="index">
+		<details-info></details-info>
+		<view class="tabbar">
+			<view class="tabbar-item" @click="switchTab('details')">
+				<imgs class="icon" line="tabbar/details" fill="tabbar/details_fill" :curShow="curTab=='details'"></imgs>
+				<p class="desc">明细</p>
+			</view>
+			<view class="tabbar-item" @click="switchTab('chart')">
+				<imgs class="icon" line="tabbar/chart" fill="tabbar/chart_fill" :curShow="curTab=='chart'"></imgs>
+				<p class="desc">图表</p>
+			</view>
+			<view class="tabbar-item" @click="switchTab('bookkeeping')">
+				<img class="icon bookkeep" src="../../static/tabbar/bookkeeping.png" mode="widthFix" alt="">
+				<p class="desc">记账</p>
+			</view>
+			<view class="tabbar-item" @click="switchTab('community')">
+				<imgs class="icon" line="tabbar/community" fill="tabbar/community_fill" :curShow="curTab=='community'">
+				</imgs>
+				<p class="desc">社区</p>
+			</view>
+			<view class="tabbar-item" @click="switchTab('mine')">
+				<imgs class="icon" line="tabbar/mine" fill="tabbar/mine_fill" :curShow="curTab=='mine'"></imgs>
+				<p class="desc">我的</p>
+			</view>
 		</view>
 	</view>
 </template>
 
 <script>
+	import detailsInfo from '@/components/details-info.vue';
+	import imgs from '@/components/imgs.vue';
 	export default {
+		components: {
+			detailsInfo,
+			imgs
+		},
 		data() {
 			return {
-				title: 'Hello'
+				curTab: 'details',
 			}
 		},
 		onLoad() {
 
 		},
 		methods: {
-
+			switchTab(val) {
+				// console.log(val);
+				this.curTab = val;
+			}
 		}
 	}
 </script>
 
-<style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
+<style lang="scss" scoped>
+	@import "/style/perfect.css";
 
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
+	.index {
+		height: 100vh;
 
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
+		.tabbar {
+			height: 10%;
+			background-color: #fff;
+			border-top: 1px solid #f7f7f7;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding-top: 16rpx;
+			box-sizing: border-box;
+			display: flex;
 
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
+			-webkit-animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+			animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+
+			.tabbar-item {
+				width: 20%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				position: relative;
+
+				.icon {
+					width: 40rpx;
+
+					&.bookkeep {
+						width: 120rpx;
+						height: 120rpx;
+						position: relative;
+						top: -80rpx;
+					}
+				}
+
+				.desc {
+					position: absolute;
+					top: 50rpx;
+					font-size: 20rpx;
+					color: #636363;
+				}
+			}
+		}
 	}
 </style>

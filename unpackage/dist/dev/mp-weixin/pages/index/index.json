@@ -1,4 +1,6 @@
 {
-  "navigationBarTitleText": "uni-app",
-  "usingComponents": {}
+  "usingComponents": {
+    "details-info": "/components/details-info",
+    "imgs": "/components/imgs"
+  }
 }

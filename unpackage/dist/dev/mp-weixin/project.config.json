@@ -6,12 +6,12 @@
     },
     "setting": {
         "urlCheck": false,
+        "minified": true,
         "coverView": true,
         "es6": true,
         "postcss": true,
         "lazyloadPlaceholderEnable": false,
         "preloadBackgroundData": false,
-        "minified": true,
         "autoAudits": false,
         "uglifyFileName": false,
         "uploadWithSourceMap": true,
@@ -29,12 +29,11 @@
             "outputPath": ""
         },
         "disableUseStrict": false,
-        "useCompilerPlugins": false,
-        "minifyWXML": true
+        "useCompilerPlugins": false
     },
     "compileType": "miniprogram",
     "libVersion": "2.25.2",
-    "appid": "touristappid",
+    "appid": "wx08b6c0d072e82d9c",
     "projectname": "keepBook",
     "condition": {},
     "editorSetting": {

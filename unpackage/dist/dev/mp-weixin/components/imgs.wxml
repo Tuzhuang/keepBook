@@ -1,0 +1,1 @@
+<view class="box"><image class="line _img" src="{{'../static/'+line+'.png'}}"></image><image class="{{['fill','_img',!curShow?'isShow':'']}}" src="{{'../static/'+fill+'.png'}}"></image></view>
