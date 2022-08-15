@@ -1,16 +1,17 @@
 {
-  "pages": [
-    "pages/index/index"
-  ],
-  "subPackages": [],
-  "window": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "keepBook",
-    "navigationBarBackgroundColor": "#f9db61",
-    "backgroundColor": "#f9db61"
-  },
-  "usingComponents": {
-    "details-info": "/components/details-info",
-    "imgs": "/components/imgs"
-  }
+    "pages": [
+        "pages/index/index"
+    ],
+    "subPackages": [],
+    "window": {
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "keepBook",
+        "navigationBarBackgroundColor": "#fff",
+        "backgroundColor": "#fff"
+    },
+    "usingComponents": {
+        "detailsInfo": "/components/detailsInfo",
+        "imgs": "/components/imgs"
+    },
+    "sitemapLocation": "sitemap.json"
 }

@@ -7,10 +7,12 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "keepBook",
-		"navigationBarBackgroundColor": "#f9db61",
-		"backgroundColor": "#f9db61",
+		// "navigationBarBackgroundColor": "#f9db61",
+		"navigationBarBackgroundColor": "#fff",
+		"backgroundColor": "#fff",
+		// "backgroundColor": "#f9db61",
 		"usingComponents": {
-		        "details-info" : "/components/details-info",
+		        "detailsInfo" : "/components/detailsInfo",
 		        "imgs" : "/components/imgs"
 		    }
 	},

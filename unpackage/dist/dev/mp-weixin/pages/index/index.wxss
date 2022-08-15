@@ -194,6 +194,18 @@
 }
 .index.data-v-57280228 {
   height: 100vh;
+  position: relative;
+}
+.index .add-bill.data-v-57280228 {
+  width: 100%;
+  position: absolute;
+  top: 100vh;
+  transition: 300ms;
+  z-index: 10;
+}
+.index .add-bill-animate.data-v-57280228 {
+  top: 0;
+  transition: 400ms;
 }
 .index .tabbar.data-v-57280228 {
   height: 10%;

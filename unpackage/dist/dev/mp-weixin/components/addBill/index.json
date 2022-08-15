@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "u-tabs": "/uni_modules/uview-ui/components/u-tabs/u-tabs",
+    "add-expend": "/components/addBill/components/addExpend",
+    "add-income": "/components/addBill/components/addIncome"
+  }
+}

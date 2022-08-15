@@ -1,6 +1,9 @@
 <template>
 	<view class="index">
-		<details-info></details-info>
+		<!-- 明细 -->
+		<details-info v-if="curTab=='details'"></details-info>
+		<!-- 添加账单 -->
+		<add-bill class="add-bill" @cancel="onCancel" :class="isAddBill?'add-bill-animate':''"></add-bill>
 		<view class="tabbar">
 			<view class="tabbar-item" @click="switchTab('details')">
 				<imgs class="icon" line="tabbar/details" fill="tabbar/details_fill" :curShow="curTab=='details'"></imgs>
@@ -10,8 +13,8 @@
 				<imgs class="icon" line="tabbar/chart" fill="tabbar/chart_fill" :curShow="curTab=='chart'"></imgs>
 				<p class="desc">图表</p>
 			</view>
-			<view class="tabbar-item" @click="switchTab('bookkeeping')">
-				<img class="icon bookkeep" src="../../static/tabbar/bookkeeping.png" mode="widthFix" alt="">
+			<view class="tabbar-item" @click="isAddBill=true">
+				<img class="icon bookkeep" src="@/static/tabbar/bookkeeping.png" mode="widthFix" alt="">
 				<p class="desc">记账</p>
 			</view>
 			<view class="tabbar-item" @click="switchTab('community')">
@@ -28,16 +31,19 @@
 </template>
 
 <script>
-	import detailsInfo from '@/components/details-info.vue';
+	import detailsInfo from '@/components/detailsInfo.vue';
 	import imgs from '@/components/imgs.vue';
+	import addBill from '@/components/addBill/index.vue';
 	export default {
 		components: {
 			detailsInfo,
-			imgs
+			imgs,
+			addBill
 		},
 		data() {
 			return {
 				curTab: 'details',
+				isAddBill: false,
 			}
 		},
 		onLoad() {
@@ -45,8 +51,10 @@
 		},
 		methods: {
 			switchTab(val) {
-				// console.log(val);
 				this.curTab = val;
+			},
+			onCancel(){
+				this.isAddBill = false;
 			}
 		}
 	}
@@ -57,6 +65,19 @@
 
 	.index {
 		height: 100vh;
+		position: relative;
+		
+		.add-bill {
+			width: 100%;
+			position: absolute;
+			top: 100vh;
+			transition: 300ms;
+			z-index: 10;
+			&-animate {
+				top: 0;
+				transition: 400ms;
+			}
+		}
 
 		.tabbar {
 			height: 10%;

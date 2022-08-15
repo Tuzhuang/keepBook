@@ -29,10 +29,11 @@
             "outputPath": ""
         },
         "disableUseStrict": false,
-        "useCompilerPlugins": false
+        "useCompilerPlugins": false,
+        "minifyWXML": true
     },
     "compileType": "miniprogram",
-    "libVersion": "2.25.2",
+    "libVersion": "2.25.3",
     "appid": "wx08b6c0d072e82d9c",
     "projectname": "keepBook",
     "condition": {},
