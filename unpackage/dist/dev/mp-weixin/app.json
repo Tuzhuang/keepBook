@@ -1,17 +1,20 @@
 {
-    "pages": [
-        "pages/index/index"
-    ],
-    "subPackages": [],
-    "window": {
-        "navigationBarTextStyle": "black",
-        "navigationBarTitleText": "keepBook",
-        "navigationBarBackgroundColor": "#fff",
-        "backgroundColor": "#fff"
-    },
-    "usingComponents": {
-        "detailsInfo": "/components/detailsInfo",
-        "imgs": "/components/imgs"
-    },
-    "sitemapLocation": "sitemap.json"
+  "pages": [
+    "pages/index/index",
+    "pages/eatWhat/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "keepBook",
+    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#fff"
+  },
+  "usingComponents": {
+    "detailsInfo": "/components/detailsInfo",
+    "mine": "/components/mine",
+    "imgs": "/components/imgs",
+    "addBill": "/components/addBill/index",
+    "cascadSelect": "/components/cascadSelect"
+  }
 }

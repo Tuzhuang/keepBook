@@ -2,8 +2,11 @@
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
 			"path": "pages/index/index"
+		},
+		{
+			"path": "pages/eatWhat/index"
 		}
-	],
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "keepBook",
@@ -13,7 +16,10 @@
 		// "backgroundColor": "#f9db61",
 		"usingComponents": {
 		        "detailsInfo" : "/components/detailsInfo",
-		        "imgs" : "/components/imgs"
+		        "mine" : "/components/mine",
+		        "imgs" : "/components/imgs",
+		        "addBill" : "/components/addBill/index",
+		        "cascadSelect" : "/components/cascadSelect"
 		    }
 	},
 	"uniIdRouter": {}

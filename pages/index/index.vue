@@ -2,8 +2,10 @@
 	<view class="index">
 		<!-- 明细 -->
 		<details-info v-if="curTab=='details'"></details-info>
+		<!-- 我的 -->
+		<mine v-if="curTab=='mine'"></mine>
 		<!-- 添加账单 -->
-		<add-bill class="add-bill" @cancel="onCancel" :class="isAddBill?'add-bill-animate':''"></add-bill>
+		<add-bill class="add-bill" v-if="isAddBill" @cancel="onCancel" :class="isAddBill?'add-bill-animate':''"></add-bill>
 		<view class="tabbar">
 			<view class="tabbar-item" @click="switchTab('details')">
 				<imgs class="icon" line="tabbar/details" fill="tabbar/details_fill" :curShow="curTab=='details'"></imgs>
@@ -32,17 +34,19 @@
 
 <script>
 	import detailsInfo from '@/components/detailsInfo.vue';
+	import mine from '@/components/mine.vue';
 	import imgs from '@/components/imgs.vue';
 	import addBill from '@/components/addBill/index.vue';
 	export default {
 		components: {
 			detailsInfo,
+			mine,
 			imgs,
 			addBill
 		},
 		data() {
 			return {
-				curTab: 'details',
+				curTab: 'mine',
 				isAddBill: false,
 			}
 		},

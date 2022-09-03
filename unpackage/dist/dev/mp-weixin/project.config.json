@@ -13,7 +13,7 @@
         "lazyloadPlaceholderEnable": false,
         "preloadBackgroundData": false,
         "autoAudits": false,
-        "uglifyFileName": false,
+        "uglifyFileName": true,
         "uploadWithSourceMap": true,
         "enhance": true,
         "showShadowRootInWxmlPanel": true,
@@ -29,14 +29,30 @@
             "outputPath": ""
         },
         "disableUseStrict": false,
-        "useCompilerPlugins": false,
-        "minifyWXML": true
+        "useCompilerPlugins": false
     },
     "compileType": "miniprogram",
     "libVersion": "2.25.3",
     "appid": "wx08b6c0d072e82d9c",
     "projectname": "keepBook",
-    "condition": {},
+    "condition": {
+        "search": {
+            "current": -1,
+            "list": []
+        },
+        "conversation": {
+            "current": -1,
+            "list": []
+        },
+        "game": {
+            "current": -1,
+            "list": []
+        },
+        "miniprogram": {
+            "current": -1,
+            "list": []
+        }
+    },
     "editorSetting": {
         "tabIndent": "insertSpaces",
         "tabSize": 4

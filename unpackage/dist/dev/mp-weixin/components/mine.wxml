@@ -1,0 +1,1 @@
+<view class="mine"><view data-event-opts="{{[['tap',[['goToEat',['$event']]]]]}}" class="eat-what" bindtap="__e">今天吃什么</view></view>

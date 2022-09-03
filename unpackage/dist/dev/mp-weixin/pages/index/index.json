@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "details-info": "/components/detailsInfo",
+    "mine": "/components/mine",
     "imgs": "/components/imgs",
     "add-bill": "/components/addBill/index"
   }
