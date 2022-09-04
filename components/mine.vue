@@ -1,8 +1,7 @@
 <template>
 	<view class="mine">
-			<view class="eat-what" @click="goToEat">
-				今天吃什么
-			</view>
+		<u-button @click="goToEat" type="primary" text="我来告诉你今天吃什么"></u-button>
+		<u-button @click="toRecipe" type="success" text="我来告诉你今天做什么"></u-button>
 	</view>
 </template>
 
@@ -17,6 +16,11 @@
 			goToEat(){
 				uni.navigateTo({
 					url:'/pages/eatWhat/index'
+				})
+			},
+			toRecipe(){
+				uni.navigateTo({
+					url:'/pages/recipe/index'
 				})
 			}
 		}

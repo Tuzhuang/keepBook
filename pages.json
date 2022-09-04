@@ -5,7 +5,10 @@
 		},
 		{
 			"path": "pages/eatWhat/index"
-		}
+		},
+		{
+			"path" : "pages/recipe/index"
+      }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

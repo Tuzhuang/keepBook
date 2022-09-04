@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/eatWhat/index"
+    "pages/eatWhat/index",
+    "pages/recipe/index"
   ],
   "subPackages": [],
   "window": {

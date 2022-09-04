@@ -1,1 +1,1 @@
-<view class="mine"><view data-event-opts="{{[['tap',[['goToEat',['$event']]]]]}}" class="eat-what" bindtap="__e">今天吃什么</view></view>
+<view class="mine"><u-button vue-id="9736db90-1" type="primary" text="我来告诉你今天吃什么" data-event-opts="{{[['^click',[['goToEat']]]]}}" bind:click="__e" bind:__l="__l"></u-button><u-button vue-id="9736db90-2" type="success" text="我来告诉你今天做什么" data-event-opts="{{[['^click',[['toRecipe']]]]}}" bind:click="__e" bind:__l="__l"></u-button></view>
